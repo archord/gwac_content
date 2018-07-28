@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="${ctx}/static/vendor/adminlte/css/AdminLTE.min.css">
     <link rel="stylesheet" href="${ctx}/static/vendor/adminlte/css/skins/skin-blue.min.css">
     <link rel="stylesheet" href="${ctx}/static/css/main.css">
+  <link type="image/x-icon" rel="shortcut icon" href="/template/1/default/_files/img/favicon.ico"/>
     <!--[if lt IE 9]>
     <script src="${ctx}/static/vendor/html5shiv/html5shiv.min.js"></script>
     <script src="${ctx}/static/vendor/respond/respond.min.js"></script>

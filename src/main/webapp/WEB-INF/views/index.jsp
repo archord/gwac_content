@@ -13,6 +13,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><jsp:include page="/WEB-INF/views/title.jsp"/></title>
+  <link type="image/x-icon" rel="shortcut icon" href="/template/1/default/_files/img/favicon.ico"/>
   <meta name="renderer" content="webkit">
   <!-- <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"> -->
   <script>if(top!=this){top.location=this.location;}</script>
@@ -207,6 +208,7 @@ function nav(centerUrl,leftUrl) {
 			window.frames['left'].location.href = "blank.do";
 		}
 	}
+        console.log(centerUrl);
 	window.frames['center'].location.href = centerUrl;
 }
 $(function() {

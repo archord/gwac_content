@@ -13,8 +13,8 @@
     	[#assign oauthWeiboUrl]${ctx}/oauth/login/weibo?fallbackUrl=${Param.fallbackUrl?url}[/#assign]
 	[/#if]
     [#if oauthWeixinUrl?? && oauthQqUrl?? && oauthWeiboUrl??]
-    <div class="c-666 fs12" style="border-top:1px dashed #ccc;padding-top:8px;margin-top:10px;">或者您也可以用以下网站账号登录</div>
-    <div style="margin-top:8px;">
+    <div class="c-666 fs12" style="border-top:1px dashed #ccc;padding-top:8px;margin-top:10px;visibility:hidden;">或者您也可以用以下网站账号登录</div>
+    <div style="margin-top:8px;visibility:hidden;">
     	<div class="mt10"><a href="${oauthWeixinUrl}"><img src="_files/img/oauth_weixin_icon24.png"/></a></div>
       <div class="mt10"><a href="${oauthQqUrl}"><img src="_files/img/oauth_qq_7.png"/></a></div>
       <div class="mt10"><a href="${oauthWeiboUrl}"><img src="_files/img/oauth_weibo_240.png"/></a></div>

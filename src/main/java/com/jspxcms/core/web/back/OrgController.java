@@ -128,9 +128,11 @@ public class OrgController {
                        HttpServletRequest request, RedirectAttributes ra) {
         Site site = Context.getCurrentSite();
         String orgTreeNumber = site.getOrg().getTreeNumber();
-        Org parent = service.get(parentId);
-        if (!parent.getTreeNumber().startsWith(orgTreeNumber)) {
-            throw new CmsException("error.forbiddenData");
+        if(parentId!=null){
+          Org parent = service.get(parentId);
+          if (!parent.getTreeNumber().startsWith(orgTreeNumber)) {
+              throw new CmsException("error.forbiddenData");
+          }
         }
         service.save(bean, parentId);
         logService.operation("opr.org.add", bean.getName(), null, bean.getId(),

@@ -11,12 +11,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>Jspxcms管理平台 - Powered by Jspxcms</title>
+<title>GWAC科学产品管理系统 - Powered by GWAC</title>
 <style type="text/css">
 html,body{margin:0;padding:0;}
 </style>
 </head>
 <body>
-<p style="padding:20px;margin:0;">本功能在商业版中提供。请联系官方网站 <a href="http://www.jspxcms.com/purchase.html" target="_blank">www.jspxcms.com</a> 购买。支持正版，我们会做的更好！</p>
+<p style="padding:20px;margin:0;">本功能有待实现！！</p>
 </body>
 </html>
