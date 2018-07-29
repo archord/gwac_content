@@ -208,7 +208,6 @@ function nav(centerUrl,leftUrl) {
 			window.frames['left'].location.href = "blank.do";
 		}
 	}
-        console.log(centerUrl);
 	window.frames['center'].location.href = centerUrl;
 }
 $(function() {
