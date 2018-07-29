@@ -625,12 +625,6 @@
                                     <input id="imagesFileUpload" type="file" multiple>
                                 </span>
                                 <button class="btn btn-default" type="button" onclick="addImageRow('','');"><s:message code='addRow'/></button>
-                                <script>
-                                    var imagesJfUpload = Cms.jfUploadImages("images", {
-                                        file_size_limit: ${GLOBAL.upload.imageLimit},
-                                        acceptFileTypes: ${GLOBAL.upload.imageTypes}
-                                    }, addImageRow);
-                                </script>
                                 <div class="input-group">
                                     <span class="input-group-addon"><s:message code="width"/></span>
                                     <f:text class="form-control" id="w_images" value="${field.customs['imageWidth']}" default="1500" style="width:70px;"/>
@@ -645,6 +639,14 @@
                                 <f:hidden id="t_images" value="${(!empty field.customs['thumbnail']) ? field.customs['thumbnail'] : 'true'}"/>
                                 <f:hidden id="tw_images" value="${(!empty field.customs['thumbnailWidth']) ? field.customs['thumbnailWidth'] : '116'}"/>
                                 <f:hidden id="th_images" value="${(!empty field.customs['thumbnailHeight']) ? field.customs['thumbnailHeight'] : '77'}"/>
+                                <script>
+                                    var imagesJfUpload = Cms.jfUploadImages("images", {
+                                        file_size_limit: ${GLOBAL.upload.imageLimit},
+                                        acceptFileTypes: ${GLOBAL.upload.imageTypes}
+                                    }, addImageRow);
+                                </script>
+                                
+                                
                             </div>
                             <div id="imagesProgress" class="progress" style="display:none;">
                                 <div class="progress-bar progress-bar-success"></div>
