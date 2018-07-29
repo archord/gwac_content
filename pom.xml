@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jspxcms</groupId>
-	<artifactId>jspxcms</artifactId>
+	<artifactId>ROOT</artifactId>
 	<version>9.0.0</version>
 	<packaging>war</packaging>
 
-	<name>Jspxcms</name>
+	<name>gwac_content</name>
 	<description>Jspxcms是灵活的、易扩展的、企业级开源网站内容管理系统，支持多组织、多站点、独立管理的网站群，支持MySQL、Oracle、SQLServer等数据库。</description>
 	<url>http://www.jspxcms.com/</url>
 	<inceptionYear>2011-2017</inceptionYear>

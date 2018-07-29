@@ -6,7 +6,10 @@
     <script>
     //生成静态HTML时，需要使用js判断是否为手机端访问，并跳转到手机端地址
       var ua = navigator.userAgent;
-      var ipad = ua.match(/(iPad).*OS\s([\d_]+)/), isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/), isAndroid = ua.match(/(Android)\s+([\d.]+)/), isMobile = isIphone || isAndroid;
+      var ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
+      var isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/);
+      var isAndroid = ua.match(/(Android)\s+([\d.]+)/);
+      var isMobile = isIphone || isAndroid;
       if (isMobile)
         location.href = "${site.urlMobile}";
     </script>
