@@ -17,7 +17,6 @@
     <meta name="description" content="${node.description}"/>
     <link href="_files/global.css" rel="stylesheet"/>
     <link href="_files/style.css" rel="stylesheet"/>
-    <link type="image/x-icon" rel="shortcut icon" href="_files/img/favicon.ico"/>
     [#include 'inc_js.html'/]
   </head>
   <body>
@@ -104,7 +103,7 @@
         [/@InfoList]
         <div class="mt10">
           <div class="box3">
-            <div class="head b c-node fs14">热点排行</div>
+            <div class="head b c-node fs14">热度排行</div>
           </div>
           <ul class="list-unstyled" style="padding:10px;">
             [@InfoList sort='views desc' limit='10';list]
@@ -156,7 +155,7 @@
         <ul class="list-unstyled" style="padding:5px 10px;">
           [@InfoList node='jobs' limit='6';list]
           [#list list as info]
-          <li style="padding-left:25px;height:28px;line-height:28px;background:url(_files/img/file24.png) 0 center no-repeat;">
+          <li style="padding-left:25px;height:28px;line-height:28px;background:url(_files/img/doc24.png) 0 center no-repeat;">
             <a class="fs14 a" style="padding-right:5px;" href="${info.url}" target="_blank" title="${info.title}">${substring(info.title,18)}</a>
           </li>
           [/#list]

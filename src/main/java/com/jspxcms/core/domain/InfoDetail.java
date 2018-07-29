@@ -189,7 +189,7 @@ public class InfoDetail implements java.io.Serializable {
         this.em = em;
     }
 
-    @Column(name = "f_meta_description", length = 450)
+    @Column(name = "f_meta_description", length = 2048)
     public String getMetaDescription() {
         return this.metaDescription;
     }

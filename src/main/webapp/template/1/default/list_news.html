@@ -15,7 +15,7 @@
 <div class="w center">	
 	<div style="padding:10px 5px;">您的位置:&nbsp; [#list node.hierarchy as n]<a href="${n.url}" class="a c-desc">${n.name}</a>[#if n_has_next] > [/#if][/#list]</div>
 	<div class="left w2" style="border-top:2px solid #458fce;">
-		[@InfoPage nodeId=node.id pageSize='15';pagedList]
+		[@InfoPage nodeId=node.id pageSize='8';pagedList]
 		<ul class="list-unstyled mt10">
 			[#list pagedList.content as info]
 			<li style="padding:15px 0;border-bottom:1px dotted #ccc;">

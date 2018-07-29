@@ -227,7 +227,7 @@
                                 </c:when>
                                 <c:when test="${field.name eq 'metaDescription'}">
                                     <f:hidden name="remainDescription" value="true"/>
-                                    <f:textarea name="metaDescription" value="${bean.metaDescription}" class="form-control {maxlength:450}" rows="5"/>
+                                    <f:textarea name="metaDescription" value="${bean.metaDescription}" class="form-control {maxlength:2048}" rows="5"/>
                                 </c:when>
                                 <c:when test="${field.name eq 'priority'}">
                                     <select name="priority" class="form-control">

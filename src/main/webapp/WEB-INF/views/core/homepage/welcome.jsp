@@ -160,9 +160,6 @@
 			    <table class="table">
 			    <tbody>
 			    	<tr>
-			        <th style="width:30%">当前版本</th>
-		      		<td>Jspxcms v${site.version}<a href="http://www.jspxcms.com/" target="_blank" class="latest-version">查看最新版</a></td>
-				    </tr>
 				    <tr>
 				      <th>用户名</th>
 				      <td>${user.username}</td>
