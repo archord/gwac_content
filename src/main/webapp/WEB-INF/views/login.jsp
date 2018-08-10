@@ -42,7 +42,7 @@
 %>
 <div class="login-box">
     <div class="login-logo">
-        <a href="${ctx}/" style="color:#fff;"><b>jspX</b>CMS</a>
+        <a href="${ctx}/" style="color:#fff;">GWAC</a>
     </div>
     <div class="login-box-body">
         <p class="login-box-msg text-danger">
