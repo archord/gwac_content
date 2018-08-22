@@ -31,6 +31,7 @@ import java.util.*;
 public class ContributionController {
     public static final String LIST_TEMPLATE = "sys_member_contribution_list.html";
     public static final String FORM_TEMPLATE = "sys_member_contribution_form.html";
+    public static final String FORM_TEMPLATE_UPLOAD = "sys_member_contribution_form_upload.html";
 
     @RequestMapping(value = {"/my/contribution", Constants.SITE_PREFIX_PATH + "/my/contribution"})
     public String index(Integer page, HttpServletRequest request, HttpServletResponse response,
@@ -52,6 +53,18 @@ public class ContributionController {
         Map<String, Object> data = modelMap.asMap();
         ForeContext.setData(data, request);
         return site.getTemplate(FORM_TEMPLATE);
+    }
+
+    @RequestMapping(value = {"/my/contribution/create_upload", Constants.SITE_PREFIX_PATH + "/my/contribution/create_upload"})
+    public String createFormUpload(HttpServletRequest request, HttpServletResponse response,
+                             org.springframework.ui.Model modelMap) {
+        Site site = Context.getCurrentSite();
+        List<Node> nodeList = nodeQuery.findList(site.getId(), null, true, null);
+        modelMap.addAttribute("nodeList", nodeList);
+        modelMap.addAttribute(Constants.OPRT, Constants.CREATE);
+        Map<String, Object> data = modelMap.asMap();
+        ForeContext.setData(data, request);
+        return site.getTemplate(FORM_TEMPLATE_UPLOAD);
     }
 
     @RequestMapping(value = {"/my/contribution/update/{id}",

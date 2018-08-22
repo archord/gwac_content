@@ -1,0 +1,223 @@
+[#escape x as (x)!?html]
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>${user.username}_${site.fullNameOrName}${global.customs['poweredby']}</title>
+    <meta name="keywords" content="${node.keywords}"/>
+    <meta name="description" content="${node.description}"/>
+    <link href="_files/global.css" rel="stylesheet"/>
+    <link href="_files/style.css" rel="stylesheet"/>
+
+    <script>
+      CTX = "";
+      CMSCP = "/cmscp";
+    </script>
+    <link rel="stylesheet" href="${ctx}/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${ctx}/static/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${ctx}/static/vendor/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="${ctx}/static/vendor/jquery-ui/jquery-ui.css"/>
+    <link rel="stylesheet" href="${ctx}/static/vendor/jquery-minicolors/jquery.minicolors.css">
+    <link rel="stylesheet" href="${ctx}/static/vendor/ztree/css/metroStyle/metroStyle.css"/>
+    <link rel="stylesheet" href="${ctx}/static/vendor/adminlte/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="${ctx}/static/vendor/adminlte/css/skins/skin-blue.min.css">
+    <link rel="stylesheet" href="${ctx}/static/vendor/jquery-file-upload/css/jquery.fileupload.css">
+    <link rel="stylesheet" href="${ctx}/static/vendor/editormd/css/editormd.min.css"/>
+    <link rel="stylesheet" href="${ctx}/static/css/main.css">
+
+    <script src="${ctx}/static/vendor/jquery/jquery.min.js"></script>
+    <script src="${ctx}/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${ctx}/static/vendor/jquery-ui/jquery-ui.js"></script>
+    <script src="${ctx}/static/vendor/jquery-validation/jquery-validation.min.js"></script>
+    <script src="${ctx}/static/js/jquery.validation_zh_CN.js"></script>
+    <script src="${ctx}/static/vendor/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+    <script src="${ctx}/static/vendor/jquery-file-upload/js/jquery.fileupload.js"></script>
+    <script src="${ctx}/static/vendor/jquery-file-upload/js/jquery.fileupload-process.js"></script>
+    <script src="${ctx}/static/vendor/jquery-file-upload/js/jquery.fileupload-validate.js"></script>
+    <script src="${ctx}/static/vendor/jquery-form/jquery-form.min.js"></script>
+    <script src="${ctx}/static/vendor/jquery-minicolors/jquery.minicolors.min.js"></script>
+    <script src="${ctx}/static/vendor/jquery-cookie/jquery-cookie.min.js"></script>
+    <script src="${ctx}/static/vendor/ztree/js/jquery.ztree.all.min.js"></script>
+    <script src="${ctx}/static/vendor/editormd/editormd.min.js"></script>
+    <script src="${ctx}/static/js/editormd.plugin.js"></script>
+    <script src="${ctx}/static/vendor/to-markdown.js"></script>
+    <script src="${ctx}/static/vendor/echarts.common.min.js"></script>
+    <script src="${ctx}/static/js/plugins.js"></script>
+    <script src="${ctx}/static/js/jspxcms_choose.js"></script>
+
+    <script src="${ctx}/static/vendor/My97DatePicker/cn_WdatePicker.js"></script>
+    <script src="${ctx}/static/vendor/ueditor/ueditor.config.js"></script>
+    <script src="${ctx}/static/vendor/ueditor/ueditor.all.min.js"></script>
+    <script src="${ctx}/static/vendor/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <style>
+      .user-top{background-color:#008ee1;color:#fff;}
+      .user-top a{color:#fff;text-decoration:none;}
+      .user-top a:hover{color:#fff;}
+      .ct-bg{background-color:#fff;border:1px solid #dcdcdc;}
+      .user-box{border:1px solid #ccc;background-color:#fff;}
+      .user-box-head{padding:0 12px;border-bottom:1px solid #eee;line-height:32px;height:32px;font-size:14px;font-weight:bold;font-family:"Microsoft YaHei";}
+      .user-box-body{padding:5px 12px;}
+      .user-box-body-item{padding:3px 0;}
+      .user-box-body-item a{color:#4466bb;font-size:14px;font-family:"Microsoft YaHei";text-decoration:none;display:block;}
+
+      .user-box-body-item a:hover{}
+      .user-box-body-item label{color:#666;}
+      .user-nav{list-style:none;padding-left:0;overflow:hidden; border-bottom:1px solid #008ee1;font-family:"Microsoft YaHei";font-size:14px;}
+      .user-nav-item{float:left;margin-left:12px;padding:0 12px;line-height:28px;background-color:#e6e6e6;}
+      .user-nav-item a{color:#666;text-decoration:none;}
+      .user-nav-item a:hover{color:#000;}
+      .user-nav-item-curr{background-color:#008ee1;}
+      .user-nav-item-curr a{color:#fff;}
+      .user-nav-item-curr a:hover{color:#fff;}
+
+      .form-section{padding:5px 0;}
+      .form-label{color:#666;font-weight:bold;}
+      .form-content{padding:3px 0;}
+      .form-content input[type=text],.form-content input[type=password]{height:18px;line-height:18px;}
+    </style>
+    <script>
+      $(function () {
+        $("#validForm").validate();
+      });
+    </script>
+  </head>
+  <body style="background-color:#f4f4f4;">
+    <div class="user-top">
+      <div class="w center c999" style="height:32px;line-height:32px;">
+        <div class="left">
+          <a class="topa ml5" href="${ctx}/" target="_blank">首页</a>
+          <a class="topa ml5" href="${ctx}/sitemap" target="_blank">网站地图</a>
+          <a class="topa ml5" href="${ctx}/rss">RSS订阅</a>
+          <a class="topa ml5" href="${ctx}/tags">TAGS标签</a>
+        </div>
+        <div class="right">
+          <script type="text/javascript" src="${ctx}/login_include?d=${.now?time}"></script>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="w center mt10 oh">
+      [#include 'sys_member_my_header.html'/]
+    </div>
+    <div class="w center mt10 oh">
+      <div class="left" style="width:240px;">
+        <div class="user-box">
+          <div class="user-box-head">账号管理</div>
+          <div class="user-box-body">
+            [#include 'sys_member_my_left.html'/]
+          </div>
+        </div>
+      </div>
+      <div class="right user-box" style="width:740px;">
+        <div class="user-box-head">文件上传</div>
+        <form id="validForm" action="${ctx}/my/contribution/[#if oprt=='edit']update[#else]create[/#if]" method="post" style="padding:10px 16px;">
+          <input type="hidden" name="nextUrl" value="${ctx}/my/contribution"/>
+          <input type="hidden" name="id" value="${bean.id}"/>
+          <!-- 对于退回的稿件，修改同时再次提交审核 -->
+          <input type="hidden" name="pass" value="true"/>
+          <div class="form-section">
+            <div class="form-label"><em class="required">*</em>栏目：</div>
+            <div class="form-content">
+              <select name="nodeId" class="required">
+                <option value="49">下载</option>
+                <option value="77">--共享数据</option>
+                <option value="78">--GWAC数据</option>
+                <option value="79">--私有数据</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-label"><em class="required">*</em>标题：</div>
+            <div class="form-content"><input type="text" name="title" value="${bean.title}" class="required" style="width:500px;"/></div>
+          </div>
+          <div class="form-section">
+            <div class="form-label"><em class="required">*</em>上传文件：</div>
+            <div class="form-content"><input id="fileFileUpload1" type="file" multiple></div>
+          </div>
+
+          <div class="form-section">
+            <div class="input-group">
+              <span class="input-group-addon">名称：</span>
+              <input type="text" class="form-control" id="fileName" name="fileName" value="${bean.fileName}" maxlength="255"/>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">地址：</span>
+              <input type="text" class="form-control" id="file" name="file" value="${bean.file}" maxlength="255"/>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">大小：</span>
+              <input type="text" class="form-control {digits:true,max:2147483647}" id="fileLength" name="fileLength" value="${bean.fileLength}" maxlength="10"/>
+              <span class="input-group-btn">
+                <span class="btn btn-success fileinput-button">
+                  <i class="glyphicon glyphicon-plus"></i>
+                  <span>上传文件</span>
+                  <input id="fileFileUpload" type="file" multiple>
+                </span>
+              </span>
+            </div>
+            <div id="fileProgress" class="progress" style="display:none;">
+              <div class="progress-bar progress-bar-success"></div>
+            </div>
+            <script type="text/javascript">
+
+      $(function () {
+        Cms.f7.uploads("file", "fileName", {
+          settings: {"title": "选择附件"}
+        });
+      });
+      var fileJfUpload = Cms.jfUploadFile("file", {
+        file_size_limit: 0,
+        acceptFileTypes: undefined
+      });
+
+            </script>
+          </div>
+          <div class="form-section">
+            <div class="form-label"><em class="required">*</em>注释：</div>
+            <div class="form-content">
+              <!-- <textarea id="text" name="text">${bean.text}</textarea> -->
+              <script id="text" name="text" type="text/plain"></script>
+              <script type="text/javascript">
+                $(function () {
+                  window.UEDITOR_HOME_URL = "${ctx}/static/vendor/ueditor/";
+                  var editor_text = UE.getEditor('text', {
+                    toolbars: window.UEDITOR_CONFIG.toolbars_BasicPage,
+                    //initialFrameWidth:700,
+                    initialFrameHeight: 300,
+                    serverUrl: "${dy}/ueditor?ueditor=true"
+                  });
+                  editor_text.ready(function () {
+                    editor_text.setContent("[#noescape]${(bean.text)!?js_string}[/#noescape]");
+                  });
+                });
+              </script>
+            </div>
+          </div>
+          <div class="form-section">
+            <input type="submit" value="提交" style="height:25px;width:60px;"/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div style="border-top:1px solid #e6e6e6;padding-bottom:20px;margin-top:30px;"></div>
+    <div class="w center text-center">
+      <div class="powered">    
+        <span>Powered by <strong style="font-size:12px"><a href="http://www.jspxcms.com" target="_blank" class="c-666 a-hover">Jspxcms</a></strong></span>
+        <span>&copy; 2010-2017 Jspxcms All Rights Reserved</span>
+      </div>
+      <div class="copyright">
+        <span>${site.customs['company']} 版权所有</span>
+        <span><a href="http://www.miibeian.gov.cn" target="_blank" class="icp c-666 a-hover">${site.customs['icp']}</a></span>
+      </div>
+    </div>
+  </body>
+</html>
+[/#escape]

@@ -32,17 +32,13 @@ a.node-curr{color:#fff;background-color:#fb6902;text-decoration:none;}
 				</div>
 				<div class="right ff-yh c-333 fs14" style="width:420px;">
 					<div class="mt10">
-						<div class="left" style="width:210px;">推荐星级：<span style="color:#fe6500;font-size:12px;font-family:\5b8b\4f53;">${info.customs['star']}</span></div>
-						<div class="left" style="width:210px;">文件大小：${info.fileSize}</div>
-						<div class="clear"></div>
-					</div>
-					<div class="mt10">
 						<div class="left" style="width:210px;">浏览次数：<span id="info_views"style="color:red;"></span> 次</div>
 						<div class="left" style="width:210px;">更新时间：${info.publishDate?string('yyyy-MM-dd')}</div>
 						<div class="clear"></div>
 					</div>
 					<div class="mt10">
 						<div class="left" style="width:210px;">下载次数：<span id="info_downloads" style="color:red;"></span> 次</div>
+						<div class="left" style="width:210px;">文件大小：${info.fileSize}</div>
 						<script type="text/javascript">
 							$("#info_views").load("${dy}/info_views/${info.id}?d="+new Date()*1);
 							$("#info_downloads").load("${dy}/info_downloads/${info.id}?d="+new Date()*1);
