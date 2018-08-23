@@ -126,9 +126,9 @@
           <div class="form-section">
             <div class="form-label"><em class="required">*</em>栏目：</div>
             <div class="form-content">
-              <select name="nodeId" class="required">
+              <select name="nodeId" class="form-control">
                 <option value="49">下载</option>
-                <option value="77">--共享数据</option>
+                <option value="77" selected>--共享数据</option>
                 <option value="78">--GWAC数据</option>
                 <option value="79">--私有数据</option>
               </select>
@@ -136,11 +136,7 @@
           </div>
           <div class="form-section">
             <div class="form-label"><em class="required">*</em>标题：</div>
-            <div class="form-content"><input type="text" name="title" value="${bean.title}" class="required" style="width:500px;"/></div>
-          </div>
-          <div class="form-section">
-            <div class="form-label"><em class="required">*</em>上传文件：</div>
-            <div class="form-content"><input id="fileFileUpload1" type="file" multiple></div>
+            <div class="form-content"><input type="text" name="title" value="${bean.title}" class="form-control" style="height:32px"/></div>
           </div>
 
           <div class="form-section">

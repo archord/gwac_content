@@ -3,6 +3,7 @@ package com.jspxcms.core.web.fore;
 import com.jspxcms.common.web.Validations;
 import com.jspxcms.core.constant.Constants;
 import com.jspxcms.core.domain.*;
+import com.jspxcms.core.service.InfoDetailService;
 import com.jspxcms.core.service.InfoQueryService;
 import com.jspxcms.core.service.InfoService;
 import com.jspxcms.core.service.NodeQueryService;
@@ -79,6 +80,7 @@ public class ContributionController {
             return resp.badRequest();
         }
         Info bean = infoQuery.get(id);
+        InfoDetail beanDetail = infoDetailService.get(id);
         if (!Validations.exist(bean, messages, "Info", id)) {
             return resp.notFound();
         }
@@ -88,6 +90,7 @@ public class ContributionController {
         List<Node> nodeList = nodeQuery.findList(site.getId(), null, true, null);
         modelMap.addAttribute("nodeList", nodeList);
         modelMap.addAttribute("bean", bean);
+        modelMap.addAttribute("beanDetail", beanDetail);
         modelMap.addAttribute(Constants.OPRT, Constants.EDIT);
         Map<String, Object> data = modelMap.asMap();
         ForeContext.setData(data, request);
@@ -220,6 +223,8 @@ public class ContributionController {
     private NodeQueryService nodeQuery;
     @Autowired
     private InfoQueryService infoQuery;
+    @Autowired
+    private InfoDetailService infoDetailService;
     @Autowired
     private InfoService infoService;
 }

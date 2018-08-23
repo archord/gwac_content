@@ -18,6 +18,8 @@
 .user-box-head{padding:0 12px;border-bottom:1px solid #eee;line-height:32px;height:32px;font-size:14px;font-weight:bold;font-family:"Microsoft YaHei";}
 .user-box-body{padding:5px 12px;}
 .user-box-body-item{padding:3px 0;}
+.user-box-body-item a{color:#4466bb;font-size:14px;font-family:"Microsoft YaHei";text-decoration:none;display:block;}
+.user-box-body-item a:hover{}
 .user-box-body-item label{color:#666;}
 .user-nav{list-style:none;padding-left:0;overflow:hidden; border-bottom:1px solid #008ee1;font-family:"Microsoft YaHei";font-size:14px;}
 .user-nav-item{float:left;margin-left:12px;padding:0 12px;line-height:28px;background-color:#e6e6e6;}
@@ -58,6 +60,13 @@
 				<div class="user-box-body-item"><label>注册时间：</label>${targetUser.creationDate?string('yyyy-MM-dd HH:mm')}</div>
 				<div class="user-box-body-item"><label>最后访问：</label>${targetUser.lastLoginDate?string('yyyy-MM-dd HH:mm')}</div>
 				<div class="user-box-body-item"><label>登录次数：</label>${targetUser.logins}</div>
+			</div>
+                </div>
+            <div class="user-box" style="margin-top:5px;">
+			<div class="user-box-head">内容管理</div>
+			<div class="user-box-body">
+				<div class="user-box-body-item"><a href="${ctx}/my/contribution/create">文章发布</a></div>
+				<!--<div class="user-box-body-item"><a href="${ctx}/my/contribution/create_upload">文件上传</a></div>-->
 			</div>
 		</div>
 	</div>
